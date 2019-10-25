@@ -1,7 +1,7 @@
 require "tty-prompt"
 
-
 class Login
+
 
  def initialize 
 @prompt = TTY::Prompt.new
@@ -10,10 +10,17 @@ class Login
     #################### Logging In
 
 def greet 
+
     puts "Hey there, welcome to the bar."
+    puts ""
+    puts ""
     check_age
+    puts ""
+    puts ""
     puts "Been here before? Y or N"
     resp = gets.chomp
+    puts ""
+    puts ""
     patron(resp)
 end
 

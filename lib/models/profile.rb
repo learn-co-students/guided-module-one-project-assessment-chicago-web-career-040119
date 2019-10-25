@@ -12,15 +12,13 @@ class Profile
     def my_profile_main_menu
 
         @choice = @prompt.select("What would you like to do?") do |menu|  
-            menu.per_page 4
-    menu.page_help '(Use arrow keys to navigate up or down)'  
           menu.choice 'View My Info', 1
           menu.choice 'Change My Info', 2
           menu.choice 'My Reviews', 3
           menu.choice 'My Taproom', 4
-          menu.choice `Delete Profile`, 5
+          menu.choice 'Delete Profile', 5
           menu.choice 'Let me see that main menu again', 6
-          menu.choice `Show me to the exit`, 7
+          menu.choice 'Show me to the exit', 7
         end
     
         my_profile_tasks
@@ -108,10 +106,12 @@ class Profile
              end
 
             when 5
+              binding.pry
                 $user.delete
                 system 'clear'
                 puts "You don't have to go home but you can't stay here..."
-                exit
+          
+                # exit
 
             when 6
                 main = Main.new
@@ -119,7 +119,7 @@ class Profile
 
             when 7
                 system 'clear'
-                exit
+                # exit
             end
     end
 
