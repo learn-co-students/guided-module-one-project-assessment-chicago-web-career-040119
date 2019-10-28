@@ -23,7 +23,7 @@ def main_menu
     case menu_choice
     when 1
         newb = NewBeer.new
-        newb.try_this
+        newb.run
         main_menu
     when 2
         if !$user.beers.empty?
